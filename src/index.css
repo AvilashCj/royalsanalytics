@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-primary: #FFFFFF;
+    --bg-subtle: #FFF7FA;
+    --bg-surface: #FFFFFF;
+    --border-subtle: #FCE7F1;
+    --border-pink: #FBCFE8;
+    --rr-pink: #EA1A85;
+    --rr-pink-hover: #D81478;
+    --rr-pink-light: #FFF0F6;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #94A3B8;
+  }
+
+  body {
+    background-color: #FAFAFC;
+    color: #0F172A;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Barlow Condensed', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-condensed {
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+
+  .font-numeric {
+    font-family: 'Bebas Neue', 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.04em;
+    line-height: 0.95;
+  }
+
+  code, pre, .font-mono, .tabular-nums {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbars for high-density tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF7FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #FBCFE8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F472B6;
+}
+
+/* Print Styles for Methodology Report export */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #0F172A !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-page-break {
+    page-break-before: always;
+  }
+}

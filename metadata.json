@@ -1,0 +1,6 @@
+{
+  "name": "SupeRR Selector: Live Pressure Intelligence Platform",
+  "description": "Rajasthan Royals SupeRR Selector Round 1 real-time cricket pressure intelligence platform identifying the most reliable batters and bowlers under high-leverage match states.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
